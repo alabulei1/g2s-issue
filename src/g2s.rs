@@ -4,7 +4,7 @@ use slack_flows::send_message_to_channel;
 #[no_mangle]
 #[tokio::main(flavor = "current_thread")]
 pub async fn run() {
-    listen_to_event("jetjinser", "github-flows", vec!["issues"], handler).await;
+    listen_to_event("alabulei1", "github-flows", vec!["issues"], handler).await;
 }
 
 async fn handler(payload: EventPayload) {
@@ -18,6 +18,6 @@ async fn handler(payload: EventPayload) {
 
         let text = format!("{}: {}\n{}\n> {}", sender, title, body, url);
 
-        send_message_to_channel("ham-5b68442", "general", text)
+        send_message_to_channel("wasmhaiku", "general", text)
     }
 }
